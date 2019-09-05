@@ -9,14 +9,14 @@ import android.content.Context
  * Time : 2019/9/4
  * Description :
  */
-abstract class MvpBasePresenter<V: MvpBaseView> {
+abstract class MvpBasePresenter<in V: MvpBaseView> {
 
     private lateinit var context: Context
     private lateinit var baseView: V
 
     fun onCreate(baseView: V){
         this.baseView = baseView
-        context = baseView.getContext()
+        context = baseView.getNowContext()
     }
 
     fun showLoading(){

@@ -10,7 +10,8 @@ import android.content.Context
  * Description :
  */
 interface MvpBaseView {
-    fun getContext(): Context
+
+    fun getNowContext(): Context
 
     fun showLoading()
 
