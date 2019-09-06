@@ -31,8 +31,19 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    api 'androidx.appcompat:appcompat:1.0.2'
-    api"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api rootProject.ext.dependencies.appcompat
+    api rootProject.ext.dependencies.androidx_core_ktx
+
+    api rootProject.ext.dependencies.kotlin_jdk
+    api rootProject.ext.dependencies.kotlin_coroutines
+    
+    api rootProject.ext.dependencies.retrofit
+    api rootProject.ext.dependencies.okhttp
+    api rootProject.ext.dependencies.gsonConvert
+
+    api rootProject.ext.dependencies.rxkotlin
+    api rootProject.ext.dependencies.rxAndroid
+    api rootProject.ext.dependencies.rxJava
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
