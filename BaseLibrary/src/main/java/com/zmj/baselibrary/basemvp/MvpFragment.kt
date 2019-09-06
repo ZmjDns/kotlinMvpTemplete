@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment
  * Time : 2019/9/5
  * Description :
  */
-abstract class MvpFragment<in V: MvpBaseView,P: MvpBasePresenter<V>>: LazyFragment(),MvpBaseView {
+abstract class MvpFragment< V: MvpBaseView,P: MvpBasePresenter<V>>: LazyFragment(),MvpBaseView {
 
     protected var presenter: P? = null
 

@@ -9,7 +9,7 @@ import android.content.Context
  * Time : 2019/9/4
  * Description :
  */
-abstract class MvpBasePresenter<in V: MvpBaseView> {
+abstract class MvpBasePresenter<V: MvpBaseView> {
 
     private lateinit var context: Context
     private lateinit var baseView: V
@@ -22,4 +22,11 @@ abstract class MvpBasePresenter<in V: MvpBaseView> {
     fun showLoading(){
         baseView.showLoading()
     }
+
+    fun getView(): V{
+        return baseView
+    }
+
+
+
 }

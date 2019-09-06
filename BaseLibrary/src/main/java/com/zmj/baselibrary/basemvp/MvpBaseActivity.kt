@@ -13,7 +13,7 @@ import org.jetbrains.annotations.Nullable
  * Time : 2019/9/4
  * Description :
  */
-abstract class MvpBaseActivity<in V: MvpBaseView, P: MvpBasePresenter<V>>:AppCompatActivity(),MvpBaseView{
+abstract class MvpBaseActivity<V: MvpBaseView, P: MvpBasePresenter<V>>:AppCompatActivity(),MvpBaseView{
 
     var mPresenter: P? = null
 
